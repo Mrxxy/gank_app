@@ -11,21 +11,9 @@ class CateTabPage {
   List<CateTabPage> initCate() {
     return <CateTabPage>[
       new CateTabPage(
-          text: "all",
-          detailPage: new DetailPage(
-            feedType: ('all'),
-            showTitle: false,
-          )),
-      new CateTabPage(
           text: "Android",
           detailPage: new DetailPage(
             feedType: ('Android'),
-            showTitle: false,
-          )),
-      new CateTabPage(
-          text: "瞎推荐",
-          detailPage: new DetailPage(
-            feedType: ('瞎推荐'),
             showTitle: false,
           )),
       new CateTabPage(
@@ -41,6 +29,12 @@ class CateTabPage {
             showTitle: false,
           )),
       new CateTabPage(
+          text: "瞎推荐",
+          detailPage: new DetailPage(
+            feedType: ('瞎推荐'),
+            showTitle: false,
+          )),
+      new CateTabPage(
           text: "拓展资源",
           detailPage: new DetailPage(
             feedType: ('拓展资源'),
@@ -52,18 +46,18 @@ class CateTabPage {
             feedType: ('App'),
             showTitle: false,
           )),
-      new CateTabPage(
-          text: "休息视频",
-          detailPage: new DetailPage(
-            feedType: ('休息视频'),
-            showTitle: false,
-          )),
+//      new CateTabPage(
+//          text: "休息视频",
+//          detailPage: new DetailPage(
+//            feedType: ('休息视频'),
+//            showTitle: false,
+//          )),
       new CateTabPage(
           text: "福利",
           detailPage: new DetailPage(
             feedType: ('福利'),
             showTitle: false,
-          ))
+          )),
     ];
   }
 }
