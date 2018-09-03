@@ -22,7 +22,6 @@ class DetailPage extends StatefulWidget {
 class _DetailPageState extends State<DetailPage> {
   var listData;
   var curPage = 1;
-  var listTotalSize = 0;
   var requestError = false;
   ScrollController _controller = new ScrollController();
 
@@ -52,7 +51,9 @@ class _DetailPageState extends State<DetailPage> {
         ? buildExceptionIndicator("网络请求出错了！")
         : listData == null
             ? new Center(
-                child: new CupertinoActivityIndicator(),
+                child: new CircularProgressIndicator(
+                  strokeWidth: 2.0,
+                ),
               )
             : new RefreshIndicator(
                 child: buildListViewBuilder(context, listData, _controller),

@@ -36,7 +36,9 @@ class HomePageState extends State<HomePage> {
               ? buildExceptionIndicator('网络请求错误')
               : _dataList == null
                   ? new Center(
-                      child: new CupertinoActivityIndicator(),
+                      child: new CircularProgressIndicator(
+                        strokeWidth: 2.0,
+                      ),
                     )
                   : buildListViewBuilder(
                       context,
